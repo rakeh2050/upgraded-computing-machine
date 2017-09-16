@@ -10,7 +10,8 @@ __dirname="C:/Users/Jatin/Documents/WEB 322/web322-app"
 
 app.get("/",function(request,respond){
     
-    respond.sendFile(path.join(__dirname, '/views', 'home.html'));
+    respond.sendFile(path.join(__dirname, '/views/', 'home.html'));
+    respond.send("Dir - "+__dirname);
 });
 //app.get("/about",function(request,respond){
    // respond.sendFile(path.join(__dirname));
