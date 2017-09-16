@@ -4,7 +4,7 @@ var app = express();
 app.use(express.static('public')); 
 // setup a 'route' to listen on the default url path
 app.get("/", (req, res) => {
-    res.send("Express http server listening on "+HTTP_PORT);
+    res.send("Express http server listening on "+HTTP_PORT+__dirname);
 });
 app.get("/",function(request,respond){
     console.log(__dirname);
