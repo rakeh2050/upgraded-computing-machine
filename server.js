@@ -7,6 +7,7 @@ app.get("/", (req, res) => {
     res.send("Express http server listening on "+HTTP_PORT);
 });
 app.get("/",function(request,respond){
+    console.log(__dirname);
     respond.sendFile(path.join(__dirname+"/views/home.html"));
 });
 app.get("/about",function(request,respond){
