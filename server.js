@@ -4,16 +4,10 @@ var app = express();
 app.use(express.static('public')); 
 
 // setup a 'route' to listen on the default url path
-function onHttpStart() {
-    console.log("Express http server listening on: " + HTTP_PORT+"  "+__dirname);
-    return new Promise (function(res,req){
-    data_service.initialize().then(function(data){
-      console.log(data)
-    }).catch(function(err){
-      console.log(err);
-    });
+app.get("/", (req, res) => {
+    res.send("Express http server listening on "+HTTP_PORT+"  "+__dirname);
 });
-}
+
 //app.get("/",function(request,respond){
     
    // respond.sendFile(path.join(__dirname, '../public', 'home.html'));
