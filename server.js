@@ -14,10 +14,10 @@ function onHttpStart() {
     });
 });
 }
-app.get("/",function(request,respond){
+//app.get("/",function(request,respond){
     
-    respond.sendFile(path.join(__dirname, '../public', 'home.html'));
-});
+   // respond.sendFile(path.join(__dirname, '../public', 'home.html'));
+//});
 //app.get("/about",function(request,respond){
    // respond.sendFile(path.join(__dirname));
 //});
