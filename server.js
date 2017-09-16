@@ -4,9 +4,16 @@ var app = express();
 app.use(express.static('public')); 
 var __dirname="C:/Users/Jatin/Documents/WEB 322/web322-app/views/home.html";
 // setup a 'route' to listen on the default url path
-app.get("/", (req, res) => {
-    res.send("Express http server listening on "+HTTP_PORT+__dirname);
+function onHttpStart() {
+    console.log("Express http server listening on: " + HTTP_PORT);
+    return new Promise (function(res,req){
+    data_service.initialize().then(function(data){
+      console.log(data)
+    }).catch(function(err){
+      console.log(err);
+    });
 });
+}
 app.get("/",function(request,respond){
     
     respond.sendFile(path.join(__dirname));
