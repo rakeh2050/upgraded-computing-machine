@@ -17,4 +17,4 @@ app.get("/",function(request,respond){
    // respond.sendFile(path.join(__dirname));
 //});
 // setup http server to listen on HTTP_PORT
-app.listen(HTTP_PORT);
+app.listen(8080);
