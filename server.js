@@ -1,18 +1,17 @@
 var HTTP_PORT = process.env.PORT || 8080;
 var express = require("express");
 var app = express();
-console.log(HTTP_PORT);
-app.use(express.static(__dirname+'public'));
+
+app.use(express.static(__dirname + '/public/'));
 
 // setup a 'route' to listen on the default url path
-app.get("/", (req, res) => {
-    res.send("Express http server listening on "+HTTP_PORT+" DIR - "+__dirname);
-});
-
-app.get("/jatin",function(request,respond){
-  console.log("dir -"+__dirname);
+//app.get("/", (req, res) => {
+  //  res.send(");
+//});
+console.log("Express http server listening on "+HTTP_PORT);
+app.get("/",function(request,respond){
     respond.sendFile(__dirname + "/views/home.html");
-console.log("FIBNAL dir -"+__dirname);
+
 
 });
 //app.get("/about",function(request,respond){
