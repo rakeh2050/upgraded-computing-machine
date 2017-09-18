@@ -5,13 +5,13 @@ body{
 	    }
 		
 		header{
-			background-color: #ddd;
+			background-color: coral;
 			padding:5px 25px;
 		}
 		
 		nav{
 			padding:8px;
-			background-color: #444;
+			background-color:cornflowerblue;
 		}
 		
 		nav ul{
@@ -22,11 +22,11 @@ body{
 		
 		nav ul li{
 			display:inline-block;
-			background-color: #444;
+			background-color: cornflowerblue;
 		}
 		
 		nav ul li a{
-			background-color: #444;
+			background-color:cornflowerblue;
 			color: #eee;
 			text-decoration: none;
 			padding:0 5px;	
