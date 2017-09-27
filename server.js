@@ -31,5 +31,11 @@ app.get("/about",function(request,respond){
 
 });
 
+app.get("/empdep1",function(request,respond){
+    respond.send("Emp Dep 1");
+
+
+});
+
 app.listen(HTTP_PORT);
 
