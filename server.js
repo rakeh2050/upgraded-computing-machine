@@ -14,7 +14,7 @@ assignment has been copied manually or electronically from any other source
 var HTTP_PORT = process.env.PORT || 2020;
 var express = require("express");
 var app = express();
-//var file=require("./data-server.js")
+
 var db = require("./data-service.js");
 app.use(express.static(__dirname + '/public/'));
 var path = require("path");
@@ -22,11 +22,11 @@ var path = require("path");
 
 
 app.get("/", function(request,response){
-   //response.send("Hello World<br /><a href='/about'>Go to the about page</a>");
+   
    response.sendFile(path.join(__dirname + "/views/home.html"));
 });
 
-// setup another route to listen on /about
+
 app.get("/about", function(request,response){
   response.sendFile(path.join(__dirname + "/views/about.html"));
 });

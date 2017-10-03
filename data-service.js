@@ -44,17 +44,17 @@ module.exports.initialize = function(){
     
    
 module.exports.getEmployeesByStatus = function(status){
-    var arryByStatus = [];
+    var empSts = [];
     return new Promise(function(resolve,reject){
         for(let i = 0; i < employees.length; i++){
             if(employees[i].status == status){
-                arryByStatus.push(employees[i]);
+                empSts.push(employees[i]);
             }
         }
-        if (arryByStatus.length == 0){
+        if (empSts.length == 0){
             reject("No Result Returned!!!");
         }
-        resolve(arryByStatus);
+        resolve(empSts);
     });
 }
     
