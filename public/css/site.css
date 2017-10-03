@@ -14,6 +14,10 @@ body{
 		header{
 			background-color: coral;
 			padding:5px 25px;
+			
+				-webkit-text-stroke-width: 2px;
+			  -webkit-text-stroke-color: Green;
+			  
 		}
 		
 		nav{
