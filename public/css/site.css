@@ -16,13 +16,13 @@ body{
 			padding:5px 25px;
 			font-size: 40px;
 				-webkit-text-stroke-width: 4px;
-			  -webkit-text-stroke-color:royalblue;
+			  -webkit-text-stroke-color:red;
 			  
 		}
 		
 		nav{
 			padding:8px;
-			background-color:cornflowerblue;
+			background-color:#6E024E;
 		}
 		
 		nav ul{
@@ -33,11 +33,11 @@ body{
 		
 		nav ul li{
 			display:inline-block;
-			background-color: cornflowerblue;
+			background-color: crimson;
 		}
 		
 		nav ul li a{
-			background-color:cornflowerblue;
+			background-color:crimson;
 			color: #eee;
 			text-decoration: none;
 			padding:0 5px;	
