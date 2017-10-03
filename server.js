@@ -11,7 +11,7 @@ assignment has been copied manually or electronically from any other source
 ********************************************************************************/ 
 
 
-var HTTP_PORT = process.env.PORT || 2020;
+var HTTP_PORT = process.env.PORT || 8080;
 var express = require("express");
 var app = express();
 
