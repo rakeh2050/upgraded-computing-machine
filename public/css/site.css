@@ -12,11 +12,11 @@ body{
 	    }
 		
 		header{
-			background-color: coral;
+			background-image: url(https://images.pexels.com/photos/96381/pexels-photo-96381.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb);
 			padding:5px 25px;
-			
-				-webkit-text-stroke-width: 2px;
-			  -webkit-text-stroke-color: Green;
+			font-size: 40px;
+				-webkit-text-stroke-width: 4px;
+			  -webkit-text-stroke-color:royalblue;
 			  
 		}
 		
