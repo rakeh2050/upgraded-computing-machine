@@ -55,13 +55,7 @@ app.get("/about", function(request,response){
 app.get("/employees", function(request,response){
   
   if(request.query.status){
-  /*  db.getEmployeesByStatus(request.query.status).then(function(data){
-      response.json(data);
-    }).catch(function(err){
-      response.json({message: err});
-    }); */
-////////////////////////////////////////////////////
-db.getEmployeesByStatus(req.query.status).then(function(data) {
+db.getEmployeesByStatus(request.query.status).then(function(data) {
   response.render("employeeList", { data: data, title: "Employees" });
 }).catch((err) => {
   response.render("employeeList", { data: {}, title: "Employees" });
@@ -71,23 +65,25 @@ db.getEmployeesByStatus(req.query.status).then(function(data) {
   }
   
       else if(request.query.department){
-        db.getEmployeesByDepartment(request.query.department).then(function(data){
-          response.json(data);
-        }).catch(function(err){
-          response.json({message: err});
-        });
-      }else if(request.query.manager){
-        db.getEmployeesByManager(request.query.manager).then(function(data){
-          response.json(data);
-        }).catch(function(err){
-          response.json({message: err});
-        });
+        db.getEmployeesByDepartment(request.query.department).then((data) => {
+          response.render("employeeList", { data: data, title: "Employees" });
+      }).catch((err) => {
+          response.render("employeeList", { data: {}, title: "Employees" });
+      });
+      }
+      /////////////////////
+      else if(request.query.manager){
+        db.getEmployeesByManager(request.query.manager).then((data) => {
+          response.render("employeeList", { data: data, title: "Employees" });
+      }).catch((err) => {
+          response.render("employeeList", { data: {}, title: "Employees" });
+      });
       }else{
-        db.getAllEmployees().then(function(data){
-          response.json(data);
-        }).catch(function(err){
-          response.json({message: err});
-        });
+        db.getAllEmployees().then((data) => {
+          response.render("employeeList", { data: data, title: "Employees" });
+      }).catch((err) => {
+          response.render("employeeList", { data: {}, title: "Employees" });
+      });
       }
   });
 
