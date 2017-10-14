@@ -88,11 +88,19 @@ db.getEmployeesByStatus(request.query.status).then(function(data) {
   });
 
 app.get("/employee/:num", function(request,response){
-  db.getEmployeeByNum(request.params.num).then(function(data){
-    response.json(data);
-  }).catch(function(err){
-      response.json({message: err});
-  });
+  db.getEmployeeByNum(request.params.empNum).then((data) => {
+    response.render("employee", { data: data });
+}).catch((err) => {
+    respond.status(404).send("Employee Not Found!!!");
+});
+});
+app.post("/employee/update", (req, res) => {
+  db.updateEmployee(req.body).then((data) => {
+      console.log(req.body);
+      res.redirect("/employees");
+  }).catch((err) => {
+      console.log(err);
+  })
 });
 
 app.get("/managers", function(request,response){
