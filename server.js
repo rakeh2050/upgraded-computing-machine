@@ -14,10 +14,31 @@ assignment has been copied manually or electronically from any other source
 var HTTP_PORT = process.env.PORT || 8080;
 var express = require("express");
 var app = express();
+const exphbs = require('express-handlebars');
+const bodyParser = require('body-parser');
 
 var db = require("./data-service.js");
 app.use(express.static(__dirname + '/public/'));
 var path = require("path");
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.engine(".hbs", exphbs({
+  extname: ".hbs",
+  defaultLayout: 'layout',
+  helpers: {
+    equal: function (lvalue, rvalue, options) {
+      if (arguments.length < 3)
+        throw new Error("Handlebars Helper equal needs 2 parameters");
+      if (lvalue != rvalue) {
+        return options.inverse(this);
+      } else {
+        return options.fn(this);
+      }
+    }
+  }
+}));
+app.set("view engine", ".hbs");
 
 
 
