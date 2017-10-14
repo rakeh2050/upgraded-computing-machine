@@ -44,7 +44,7 @@ app.set("view engine", ".hbs");
 
 app.get("/", function(request,response){
    
-   response.sendFile(path.join(__dirname + "/views/home.html"));
+   response.render("home");
 });
 
 
