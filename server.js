@@ -87,7 +87,7 @@ db.getEmployeesByStatus(request.query.status).then(function(data) {
       }
   });
 
-app.get("/employee/:num", function(request,response){
+app.get("/employee/:empnum", function(request,response){
   db.getEmployeeByNum(request.params.empNum).then((data) => {
     response.render("employee", { data: data });
 }).catch((err) => {
