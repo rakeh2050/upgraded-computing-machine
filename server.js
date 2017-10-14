@@ -97,9 +97,9 @@ app.get("/employee/:num", function(request,response){
 
 app.get("/managers", function(request,response){
       db.getManagers().then(function(data){
-        response.json(data);
+        response.render("employeeList", { data: data, title: "Employees (Managers)" });
       }).catch(function(err){
-        response.json({message: err});
+        res.render("employeeList", { data: {}, title: "Employees (Managers)" });
       });
 });
 
