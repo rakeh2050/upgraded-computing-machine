@@ -11,7 +11,7 @@ assignment has been copied manually or electronically from any other source
 ********************************************************************************/ 
 
 
-var HTTP_PORT = process.env.PORT || 8080;
+var HTTP_PORT = process.env.PORT || 2000;
 var express = require("express");
 var app = express();
 const exphbs = require('express-handlebars');
@@ -114,8 +114,12 @@ app.get("/employees/add", (req,res) => {
   res.render("addEmployee");
 });
 app.post("/employees/add", (req, res) => {
-  console.log(req.body);
-  res.redirect("/employees");
+  db.addEmployee(req.body).then((data) => {
+    console.log(req.body);
+    res.redirect("/employees");
+}).catch((err) => {
+    console.log(err);
+});
 });
 
 app.use(function(request, response) {

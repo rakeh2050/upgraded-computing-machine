@@ -9,7 +9,7 @@
 var fs = require("fs");
 var employees = [];
 var department = [];
-
+var empCount=0;
 module.exports.initialize = function(){
     
     return new Promise(function(resolve,reject){
@@ -18,6 +18,7 @@ module.exports.initialize = function(){
                 if(err) 
                 throw err;
                 employees = JSON.parse(data);
+                var empCount=employees.length;
             });
             fs.readFile('./data/departments.json', function(err,data){
                 if(err) throw err;
@@ -133,5 +134,16 @@ module.exports.getEmployeesByStatus = function(status){
                 }
             }
         resolve(Department);
+        });
+    }
+    module.exports.addEmployee = (employeeData) => {
+        employeeData.isManager = (employeeData.isManager) ? true : false;
+        employeeData.employeeNum = ++empCount;
+        return new Promise((resolve, reject) => {
+            employess.push(employeeData);
+            if (employess.length == 0) {
+                reject();
+            }
+            resolve(employess);
         });
     }
