@@ -49,7 +49,7 @@ app.get("/", function(request,response){
 
 
 app.get("/about", function(request,response){
-  response.sendFile(path.join(__dirname + "/views/about.html"));
+  response.render("about");
 });
 
 app.get("/employees", function(request,response){
