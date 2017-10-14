@@ -140,10 +140,10 @@ module.exports.getEmployeesByStatus = function(status){
         employeeData.isManager = (employeeData.isManager) ? true : false;
         employeeData.employeeNum = ++empCount;
         return new Promise((resolve, reject) => {
-            employess.push(employeeData);
-            if (employess.length == 0) {
+            employees.push(employeeData);
+            if (employees.length == 0) {
                 reject();
             }
-            resolve(employess);
+            resolve(employees);
         });
     }
