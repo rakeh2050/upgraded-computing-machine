@@ -94,7 +94,7 @@ app.get("/employee/:empNum", function(request,response){
     response.status(404).send("Employee Not Found!!!");
 });
 });
-app.post("/employees/update", (req, res) => {
+app.post("/employee/update", (req, res) => {
   console.log(req.body);
   res.redirect("/employees");
 });
