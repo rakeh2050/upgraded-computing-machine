@@ -110,6 +110,9 @@ app.get("/departments", function(request,response){
         response.render("departmentList", { data: data, title: "Departments" });
       });
 });
+app.get("/employees/add", (req,res) => {
+  res.render("addEmployee");
+});
 
 app.use(function(request, response) {
   response.status(404).send("ERROR 404 : Page Not Found");
