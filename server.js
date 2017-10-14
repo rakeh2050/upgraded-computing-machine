@@ -91,7 +91,7 @@ app.get("/employee/:num", function(request,response){
   db.getEmployeeByNum(request.params.empNum).then((data) => {
     response.render("employee", { data: data });
 }).catch((err) => {
-    respond.status(404).send("Employee Not Found!!!");
+    response.status(404).send("Employee Not Found!!!");
 });
 });
 app.post("/employee/update", (req, res) => {
