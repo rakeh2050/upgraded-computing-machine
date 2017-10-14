@@ -105,9 +105,9 @@ app.get("/managers", function(request,response){
 
 app.get("/departments", function(request,response){
       db.getDepartments().then(function(data){
-        response.json(data);
+        response.render("departmentList", { data: data, title: "Departments" });
       }).catch(function(err){
-        response.json({message: err});
+        response.render("departmentList", { data: data, title: "Departments" });
       });
 });
 
