@@ -18,7 +18,7 @@ module.exports.initialize = function(){
                 if(err) 
                 throw err;
                 employees = JSON.parse(data);
-                var empCount=employees.length;
+                empCount=employees.length;
             });
             fs.readFile('./data/departments.json', function(err,data){
                 if(err) throw err;
