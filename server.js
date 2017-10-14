@@ -113,6 +113,10 @@ app.get("/departments", function(request,response){
 app.get("/employees/add", (req,res) => {
   res.render("addEmployee");
 });
+app.post("/employees/add", (req, res) => {
+  console.log(req.body);
+  res.redirect("/employees");
+});
 
 app.use(function(request, response) {
   response.status(404).send("ERROR 404 : Page Not Found");
