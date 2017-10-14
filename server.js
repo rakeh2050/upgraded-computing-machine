@@ -55,11 +55,19 @@ app.get("/about", function(request,response){
 app.get("/employees", function(request,response){
   
   if(request.query.status){
-    db.getEmployeesByStatus(request.query.status).then(function(data){
+  /*  db.getEmployeesByStatus(request.query.status).then(function(data){
       response.json(data);
     }).catch(function(err){
       response.json({message: err});
-    });
+    }); */
+////////////////////////////////////////////////////
+db.getEmployeesByStatus(req.query.status).then(function(data) {
+  response.render("employeeList", { data: data, title: "Employees" });
+}).catch((err) => {
+  response.render("employeeList", { data: {}, title: "Employees" });
+});
+
+/////////////////////////////////////////////
   }
   
       else if(request.query.department){
