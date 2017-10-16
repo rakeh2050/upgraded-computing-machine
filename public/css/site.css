@@ -21,7 +21,9 @@ body{
 			  -webkit-text-stroke-color:rgb(0, 134, 224);
 			  
 		}
-		
+		table{
+			font-size: 15px;
+		}
 		nav{
 			padding:8px;
 			
