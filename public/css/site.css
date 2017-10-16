@@ -1,3 +1,5 @@
+/******************************************************************************/
+
 body{
 		   margin: 0;
 		   width:100%;
@@ -12,17 +14,21 @@ body{
 	    }
 		
 		header{
-			background-image: url(https://images.pexels.com/photos/96381/pexels-photo-96381.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb);
-			padding:5px 25px;
+			background-image: url(https://static.pexels.com/photos/594233/pexels-photo-594233.jpeg);
+			padding:25px 25px;
 			font-size: 50px;
 				-webkit-text-stroke-width: 2px;
-			  -webkit-text-stroke-color:cyan;
+			  -webkit-text-stroke-color:rgb(0, 134, 224);
 			  
 		}
 		
 		nav{
 			padding:8px;
-			background-color:#6E024E;
+			
+			background: #fc00ff;  /* fallback for old browsers */
+			background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+			background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+			
 		}
 		
 		nav ul{
@@ -33,11 +39,11 @@ body{
 		
 		nav ul li{
 			display:inline-block;
-			background-color: #6E024E;
+		
 		}
 		
 		nav ul li a{
-			background-color:#6E024E;
+		
 			color: #eee;
 			text-decoration: none;
 			padding:0 5px;	
