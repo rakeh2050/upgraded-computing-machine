@@ -21,8 +21,18 @@ body{
 			  -webkit-text-stroke-color:rgb(0, 134, 224);
 			  
 		}
+	
 		table{
 			font-size: 15px;
+			border: 2px solid crimson;
+			background:rgba(44, 62, 80,0.8);
+			
+			
+		}
+		#content{
+			margin-top:3%;
+			border: 8px solid white;
+			background:rgba(52, 152, 219,0.99);
 		}
 		nav{
 			padding:8px;
