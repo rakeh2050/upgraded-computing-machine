@@ -5,31 +5,37 @@
 * WEB322 Assignment 04
 \\\\\\\\\\\\\\\\\\\\\\\\
  **********************/
-
+// https://lcboapi.com/products?access_key=MDo5YTQyZjAzMC1iNTEzLTExZTctYjFmNS1kYmY2MTJlMTkzMzM6VDI1YTh5YlVhV3lXekE5QXh6ZGI4U0FJSHlxSVZGSklhWWhs
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
 var fs = require("fs");
+var url=require("url");
+var https=require("https");
 var employees = [];
 var department = [];
 var empCount=0;
+https.get('https://lcboapi.com/products?access_key=MDo5YTQyZjAzMC1iNTEzLTExZTctYjFmNS1kYmY2MTJlMTkzMzM6VDI1YTh5YlVhV3lXekE5QXh6ZGI4U0FJSHlxSVZGSklhWWhs',function(res)
+{
+    res.setEncoding('utf8');
+    res.on('data', function (body) {
+        console.log(body);
+    });
+});
 module.exports.initialize = function(){
-    
-    return new Promise(function(resolve,reject){
-        try{
-            fs.readFile('./data/employees.json', function(err, data){
-                if(err) 
-                throw err;
-                employees = JSON.parse(data);
-                empCount=employees.length;
-            });
-            fs.readFile('./data/departments.json', function(err,data){
-                if(err) throw err;
-                departments = JSON.parse(data);
-            });
-        }catch(ex){
-            reject("Unable to read file!");
-        }
-        resolve("Reading Data Successful.");
+    fetch('https://lcboapi.com/products?access_key=MDo5YTQyZjAzMC1iNTEzLTExZTctYjFmNS1kYmY2MTJlMTkzMzM6VDI1YTh5YlVhV3lXekE5QXh6ZGI4U0FJSHlxSVZGSklhWWhs', {
+        method: 'get'
+    }).then(function(data) {
+        console.log(data);
+        
+    }).catch(function(err) {
+        console.log(err);
     });
 }
+    
+//////////////////////////////////////////////
+
+/////////////////////////////////////////////
+   
     module.exports.getAllEmployees = function(){
         var EmpAll=[];
         return new Promise(function(resolve,reject){

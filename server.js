@@ -74,17 +74,79 @@ db.getEmployeesByStatus(request.query.status).then(function(data) {
       /////////////////////
       else if(request.query.manager){
         db.getEmployeesByManager(request.query.manager).then((data) => {
+
           response.render("employeeList", { data: data, title: "Employees" });
       }).catch((err) => {
           response.render("employeeList", { data: {}, title: "Employees" });
       });
-      }else{
+      }else
+      {
         db.getAllEmployees().then((data) => {
           response.render("employeeList", { data: data, title: "Employees" });
       }).catch((err) => {
           response.render("employeeList", { data: {}, title: "Employees" });
       });
       }
+
+      
+      
+      
+      
+      
+      
+      /******{
+        db.getAllEmployees().then((data) => {
+         //////////////////////////////////////////////
+        var contain="";
+        console.log("rrrrrrrrr");
+            for(i=0;i<data.length;i++)
+            {
+              console.log("loop");
+               
+                      var row_ = document.createElement('tr');
+                      var col_ = document.createElement('td');
+                      var media_ = document.createElement('img');
+                      media_.setAttribute("src", data[i].image);
+                      media_.setAttribute("width",142);
+                      media_.setAttribute("height",142);
+                      media_.setAttribute("alt","img");
+                    
+                      
+                      col_.appendChild(media_);
+                      row_.appendChild(col_);
+      
+                      var col2 = document.createElement('td');
+                      row_.appendChild(col2);
+                      var head = document.createElement('h2');
+                      col2.appendChild(head);
+                      var name_ = document.createTextNode(data[i].firstName);
+                      head.appendChild(name_);
+                      var p_ = document.createElement('p');
+                      var div = document.createElement('span');
+                      p_.innerHTML = data[i].address.description;
+                                          
+                      col2.appendChild(p_);
+                     
+                      ///////////////////*
+                      
+                   
+                      /////////////////
+                     
+                      
+                      col2.appendChild(div);
+                      contain.appendChild(row_);
+                    
+            
+            }
+   console.log(contain);
+            ///////////////////////////////////////////
+            
+      }).catch((err) => {
+          response.render("employeeList", { data: {}, title: "Employees" });
+      });
+    
+  
+      }**************/
   });
 
 app.get("/employee/:empNum", function(request,response){
@@ -138,9 +200,5 @@ app.use(function(request, response) {
 });
 app.listen(HTTP_PORT, function(response,request){
        console.log("Express http server listening on: " + HTTP_PORT);
-       db.initialize().then(function(data){
-           console.log(data)
-         }).catch(function(err){
-           console.log(err);
-         });
+       db.initialize();
      });
