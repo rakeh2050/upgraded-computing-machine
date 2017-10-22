@@ -52,15 +52,15 @@ Products
        
       <div class="col-md-5 data">   
           <div class="col-md-12"> 
-                   <img src={{image}} alt="Smiley face" height="100" width="100">
+                   <img src={{image_url}} alt="Smiley face" height="100" width="100">
          </div>       
-          <div class="col-md-12"><a href="/employee/{{employeeNum}}">{{firstName}}&nbsp;{{last_name}}</a></div>
-          <div class="col-md-12"><a href="mailto:{{email}}">{{email}}</a></div>
-          <div class="col-md-12">{{addressStreet}}&nbsp;{{addresCity}}&nbsp;{{addressState}}&nbsp;{{addressPostal}}</div>
-          <div class="col-md-12"><a href="/employees?manager={{employeeManagerNum}}">{{employeeManagerNum}}</a></div>
-          <div class="col-md-12"><a href="/employees?status={{status}}">{{status}}</a></br></div>
-          <div class="col-md-12"><a href="/employees?department={{department}}">{{department}}</a></div>
-          <div class="col-md-12">{{hireDate}}</div>
+          <div class="col-md-12"><a href="/employee/{{employeeNum}}">{{name}}</a></div>
+          <div class="col-md-12">Product ID#{{id}}</div>
+          <!--<div class="col-md-12">{{origin}}<p>{{producer_name}}&nbsp;{{primary_category}}</p></div>
+          <div class="col-md-12"><a href="/employees?manager={{employeeManagerNum}}">{{package}}</a></div>
+          <div class="col-md-12"><a href="/employees?status={{status}}">{{alcohol_content}}</a></br></div>
+          <div class="col-md-12"><a href="/employees?department={{department}}">{{total_package_units}}</a></div>-->
+          <div class="col-md-12">${{price_in_cents}}</div>
            
      </div>
                 

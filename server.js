@@ -88,7 +88,7 @@ db.getEmployeesByStatus(request.query.status).then(function(data) {
       });
       }
 
-      
+
       
       
       
@@ -200,5 +200,10 @@ app.use(function(request, response) {
 });
 app.listen(HTTP_PORT, function(response,request){
        console.log("Express http server listening on: " + HTTP_PORT);
-       db.initialize();
+       db.initialize()
+       .then(function(data){
+           console.log(data)
+         }).catch(function(err){
+           console.log(err);
+         });
      });

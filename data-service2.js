@@ -1,6 +1,3 @@
-/////////////
-///ORIGINAL/////
-////////////////
 /***********************
 ////////////////////////
 * Jatin Arora
@@ -8,47 +5,98 @@
 * WEB322 Assignment 04
 \\\\\\\\\\\\\\\\\\\\\\\\
  **********************/
-
+// https://lcboapi.com/products?access_key=MDo5YTQyZjAzMC1iNTEzLTExZTctYjFmNS1kYmY2MTJlMTkzMzM6VDI1YTh5YlVhV3lXekE5QXh6ZGI4U0FJSHlxSVZGSklhWWhs
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
 var fs = require("fs");
+var url=require("url");
+var https=require("https");
+var querystring = require('querystring');
 var employees = [];
 var department = [];
 var empCount=0;
+var obj={};
+
+
 module.exports.initialize = function(){
-    
+
     return new Promise(function(resolve,reject){
         try{
-            fs.readFile('./data/employees.json', function(err, data){
+           https.get('https://lcboapi.com/products?access_key=MDo5YTQyZjAzMC1iNTEzLTExZTctYjFmNS1kYmY2MTJlMTkzMzM6VDI1YTh5YlVhV3lXekE5QXh6ZGI4U0FJSHlxSVZGSklhWWhs', function(data,err){
                 if(err) 
+                {console.log(err);
                 throw err;
+                }
+                console.log(data);
                 employees = JSON.parse(data);
                 empCount=employees.length;
-                for(var j=0;j<employees.length;j++){
-                    var price=employees[j].price_in_cents;
-                    price=price/100;
-                    employees[j].price_in_cents=price;
-                   }
-            });
-            fs.readFile('./data/departments.json', function(err,data){
-                if(err) throw err;
-                departments = JSON.parse(data);
             });
         }catch(ex){
             reject("Unable to read file!");
         }
         resolve("Reading Data Successful.");
     });
+
+    /*https.get('https://lcboapi.com/products?access_key=MDo5YTQyZjAzMC1iNTEzLTExZTctYjFmNS1kYmY2MTJlMTkzMzM6VDI1YTh5YlVhV3lXekE5QXh6ZGI4U0FJSHlxSVZGSklhWWhs',function(res,err)
+    {
+
+       // console.log(res);
+        //employees=JSON.parse(res.result);
+        res.setEncoding('utf8');
+    
+              console.log(res);
+              console.log("\111111111111111111111111111111111111111111111111111111111111111");
+        res.on('data', function (body) {
+           
+           
+           obj=JSON.parse(body);
+           
+           // employees=JSON.parse(body);
+            //console.log(employees);
+            //return res.json(body);
+           
+    
+        });
+        console.log("\222222222222222222222222222222222222222222222222");
+        console.log(obj);
+    });
+
+   /* var post_data = querystring.stringify({
+        'name' : 'ABC'
+       
+    });
+  
+    var post_options = {
+       
+       
+        path: 'https://lcboapi.com/products?access_key=MDo5YTQyZjAzMC1iNTEzLTExZTctYjFmNS1kYmY2MTJlMTkzMzM6VDI1YTh5YlVhV3lXekE5QXh6ZGI4U0FJSHlxSVZGSklhWWhs',
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Length': Buffer.byteLength(post_data)
+        }
+    };
+    var post_req = http.request(post_options, function(res) {
+        res.setEncoding('utf8');
+        res.on('data', function (chunk) {
+            console.log('Response: ' + chunk);
+        });
+    });*/
 }
+    
+//////////////////////////////////////////////
+
+/////////////////////////////////////////////
+   
     module.exports.getAllEmployees = function(){
         var EmpAll=[];
         return new Promise(function(resolve,reject){
             for (var i = 0; i < employees.length; i++) {
-                
                 EmpAll.push(employees[i]);
             }
             if (EmpAll.length == 0){
                 reject("No Result Returned!!!");
             }
-           
         resolve(EmpAll);
         })
     }
