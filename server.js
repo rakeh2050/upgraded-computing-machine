@@ -82,7 +82,7 @@ db.getEmployeesByStatus(request.query.status).then(function(data) {
       }else
       {
         db.getAllEmployees().then((data) => {
-          response.render("employeeList", { data: data, title: "Employees" });
+          response.render("employeeList", { data: data, title: "PRODUCTS" });
       }).catch((err) => {
           response.render("employeeList", { data: {}, title: "Employees" });
       });
