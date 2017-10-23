@@ -1,21 +1,21 @@
 <div class="row">
     <div class="col-md-12">
-        <h1> {{data.firstName}}&nbsp;{{data.last_name}} - Employee: {{data.employeeNum}}</h1>
+        <h1> {{data.name}}&nbsp; - Product ID: {{data.id}}</h1>
         <form method="post" action="/employee/update">
-            <input type="hidden" name="employeeNum" value="{{data.employeeNum}}" />
+            <input type="hidden" name="employeeNum" value="{{data.id}}" />
             <fieldset>
                 <legend>Personal Information</legend>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="firstName">First Name:</label>
-                            <input class="form-control" id="firstName" name="firstName" type="text" value="{{data.firstName}}" />
+                            <label for="firstName">Name:</label>
+                            <input class="form-control" id="firstName" name="firstName" type="text" value="{{data.name}}" />
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="last_name">Last Name:</label>
-                            <input class="form-control" id="last_name" name="last_name" type="text" value="{{data.last_name}}" />
+                            <label for="last_name">Category:</label>
+                            <input class="form-control" id="last_name" name="last_name" type="text" value="{{data.primary_category}}" />
                         </div>
                     </div>
                 </div>
@@ -28,8 +28,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="SSN">Social Security Num:</label>
-                            <input class="form-control" id="SSN" name="SSN" type="text" value="{{data.SSN}}" readonly />
+                            <label for="SSN">Package:</label>
+                            <input class="form-control" id="SSN" name="SSN" type="text" value="{{data.package}}" readonly />
                         </div>
                     </div>
                 </div>
@@ -112,9 +112,9 @@
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
-                            <label for="department">Department</label>
+                            <label for="department">Quantity</label>
                             <select class="form-control" name="department" id="department">
-                                {{#equal data.department ""}}
+                                {{#equal data.quantity ""}}
                                     <option value="">Choose</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -124,7 +124,7 @@
                                     <option value="6">6</option>
                                     <option value="7">7</option>
                                 {{/equal}}
-                                {{#equal data.department "1"}}
+                                {{#equal data.quantity "1"}}
                                     <option value="1" selected>1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -133,7 +133,7 @@
                                     <option value="6">6</option>
                                     <option value="7">7</option>
                                 {{/equal}}
-                                {{#equal data.department "2"}}
+                                {{#equal data.quantity "2"}}
                                     <option value="1">1</option>
                                     <option value="2" selected>2</option>
                                     <option value="3">3</option>
@@ -142,7 +142,7 @@
                                     <option value="6">6</option>
                                     <option value="7">7</option>
                                 {{/equal}}
-                                {{#equal data.department "3"}}
+                                {{#equal data.quantity "3"}}
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3"selected>3</option>
@@ -151,7 +151,7 @@
                                     <option value="6">6</option>
                                     <option value="7">7</option>
                                 {{/equal}}
-                                {{#equal data.department "4"}}
+                                {{#equal data.quantity "4"}}
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -160,7 +160,7 @@
                                     <option value="6">6</option>
                                     <option value="7">7</option>
                                 {{/equal}}
-                                {{#equal data.department "5"}}
+                                {{#equal data.quantity "5"}}
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -169,7 +169,7 @@
                                     <option value="6">6</option>
                                     <option value="7">7</option>
                                 {{/equal}}
-                                {{#equal data.department "6"}}
+                                {{#equal data.quantity "6"}}
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -178,7 +178,7 @@
                                     <option value="6" selected>6</option>
                                     <option value="7">7</option>
                                 {{/equal}}
-                                {{#equal data.department "7"}}
+                                {{#equal data.quantity "7"}}
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -201,7 +201,7 @@
                 </div>
             </fieldset>
             <hr />
-            <input type="submit" class="btn btn-primary pull-right" value="Update Employee" /><br /><br /><br />
+            <input type="submit" class="btn btn-primary pull-right"  value="Add to Cart" /><br /><br /><br />
         </form>
     </div>
 </div>

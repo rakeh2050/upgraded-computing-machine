@@ -13,6 +13,8 @@ var fs = require("fs");
 var employees = [];
 var department = [];
 var empCount=0;
+var itemCount=0;
+var cart=[];
 module.exports.initialize = function(){
     
     return new Promise(function(resolve,reject){
@@ -103,7 +105,7 @@ module.exports.getEmployeesByStatus = function(status){
     module.exports.getEmployeeByNum = function(num) {
         return new Promise(function(resolve,reject){
             for(let j = 0; j < employees.length; j++){
-                if(employees[j].employeeNum == num){
+                if(employees[j].id == num){
                     resolve(employees[j]);
                 }
             }
@@ -146,28 +148,39 @@ module.exports.getEmployeesByStatus = function(status){
         resolve(Department);
         });
     }
-    module.exports.addEmployee = (employeeData) => {
-     
-        employeeData.employeeNum = ++empCount;
-        return new Promise((resolve, reject) => {
-            employees.push(employeeData);
-            if (employees.length == 0) {
-                reject();
+    module.exports.addEmployee = () => {
+     var EmpAll=[];
+             return new Promise(function(resolve,reject){
+                console.log("CART LENGTH");
+               console.log(cart.length);
+                for(var i=0;i<cart.length;i++){
+                EmpAll.push(cart[i]);
+                
+                }
+            if (cart.length == 0){
+                reject("No Result Returned!!!");
             }
-            resolve(employees);
-        });
-    }
+            console.log("ADDED^^^^^^^")
+           console.log(EmpAll);
+        resolve(EmpAll);
+        })   
+     }
     module.exports.updateEmployee = (employeeData) => {
+      
        
         return new Promise((resolve, reject) => {
-            for (let i = 0; i < employees.length; i++) {
-                if (employees[i].employeeNum == employeeData.employeeNum) {
-                    employees[i]=employeeData;
-                }
-            }
+          
+           console.log("EMPLOYEED DATA");
+               console.log(employeeData.length);
+            cart[itemCount]=employeeData;
+            cart[itemCount].count=itemCount+1;
+            itemCount++;
+    console.log(cart[itemCount]);
             if (employees.length == 0) {
                 reject();
             }
+            
+           
             resolve(employees);
         });
     }

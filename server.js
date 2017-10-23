@@ -184,7 +184,14 @@ app.get("/departments", function(request,response){
       });
 });
 app.get("/employees/add", (req,res) => {
-  res.render("addEmployee");
+  db.addEmployee().then((data) => {
+    console.log("CART DATA &&&&&&&");
+    console.log(data);
+    res.render("shoppingCart", { data: data, title: "PRODUCTS" });
+}).catch((err) => {
+  console.log("ERRRRRRRRRR");
+    res.render("about", { data: {}, title: "Employees" });
+});
 });
 app.post("/employees/add", (req, res) => {
   db.addEmployee(req.body).then((data) => {

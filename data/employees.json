@@ -49,7 +49,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 311787
-	}, {
+	, "quantity":1 }, {
 		"id": 300681,
 		"is_dead": false,
 		"name": "Coors Light",
@@ -100,7 +100,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 300681
-	}, {
+	, "quantity":1 }, {
 		"id": 300699,
 		"is_dead": false,
 		"name": "Molson Canadian",
@@ -151,7 +151,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 300699
-	}, {
+	, "quantity":1 }, {
 		"id": 696161,
 		"is_dead": false,
 		"name": "Busch",
@@ -202,7 +202,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 696161
-	}, {
+	, "quantity":1 }, {
 		"id": 311779,
 		"is_dead": false,
 		"name": "Bud Light",
@@ -253,7 +253,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 311779
-	}, {
+	, "quantity":1 }, {
 		"id": 186510,
 		"is_dead": false,
 		"name": "Corona Extra",
@@ -304,7 +304,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 186510
-	}, {
+	, "quantity":1 }, {
 		"id": 696468,
 		"is_dead": false,
 		"name": "Labatt Blue",
@@ -355,7 +355,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 696468
-	}, {
+	, "quantity":1 }, {
 		"id": 367938,
 		"is_dead": false,
 		"name": "Stella Artois",
@@ -406,7 +406,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 367938
-	}, {
+	, "quantity":1 }, {
 		"id": 302810,
 		"is_dead": false,
 		"name": "Heineken",
@@ -457,7 +457,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 302810
-	}, {
+	, "quantity":1 }, {
 		"id": 142620,
 		"is_dead": false,
 		"name": "Laker Ice",
@@ -508,7 +508,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 142620
-	}, {
+	, "quantity":1 }, {
 		"id": 586677,
 		"is_dead": false,
 		"name": "Old Milwaukee Ice",
@@ -559,7 +559,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 586677
-	}, {
+	, "quantity":1 }, {
 		"id": 493916,
 		"is_dead": false,
 		"name": "Old Milwaukee",
@@ -610,7 +610,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 493916
-	}, {
+	, "quantity":1 }, {
 		"id": 18,
 		"is_dead": false,
 		"name": "Heineken",
@@ -661,7 +661,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 18
-	}, {
+	, "quantity":1 }, {
 		"id": 487256,
 		"is_dead": false,
 		"name": "Stella Artois",
@@ -712,7 +712,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 487256
-	}, {
+	, "quantity":1 }, {
 		"id": 279307,
 		"is_dead": false,
 		"name": "Somersby Apple Cider",
@@ -763,7 +763,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 279307
-	}, {
+	, "quantity":1 }, {
 		"id": 397638,
 		"is_dead": false,
 		"name": "Lowenbrau Original",
@@ -814,7 +814,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 397638
-	}, {
+	, "quantity":1 }, {
 		"id": 908640,
 		"is_dead": false,
 		"name": "Bud Light",
@@ -865,7 +865,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 908640
-	}, {
+	, "quantity":1 }, {
 		"id": 216689,
 		"is_dead": false,
 		"name": "J.P. Wiser's Deluxe",
@@ -916,7 +916,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 216689
-	}, {
+	, "quantity":1 }, {
 		"id": 459818,
 		"is_dead": false,
 		"name": "Sapporo Premium Beer",
@@ -967,7 +967,7 @@
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
 		"product_no": 459818
-	}, {
+	, "quantity":1 }, {
 		"id": 447540,
 		"is_dead": false,
 		"name": "Georgian Bay Gin Smash",
@@ -1017,5 +1017,6 @@
 		"sugar_in_grams_per_liter": null,
 		"clearance_sale_savings_in_cents": 0,
 		"has_clearance_sale": false,
-		"product_no": 447540
+		"product_no": 447540,
+		 "quantity":1
 	}]
