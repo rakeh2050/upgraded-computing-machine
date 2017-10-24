@@ -15,6 +15,7 @@ var department = [];
 var empCount=0;
 var itemCount=0;
 var cart=[];
+var total=0;
 module.exports.initialize = function(){
     
     return new Promise(function(resolve,reject){
@@ -155,6 +156,7 @@ module.exports.getEmployeesByStatus = function(status){
                console.log(cart.length);
                 for(var i=0;i<cart.length;i++){
                 EmpAll.push(cart[i]);
+             
                 
                 }
             if (cart.length == 0){
@@ -173,7 +175,11 @@ module.exports.getEmployeesByStatus = function(status){
            console.log("EMPLOYEED DATA");
                console.log(employeeData.length);
             cart[itemCount]=employeeData;
-            cart[itemCount].count=itemCount+1;
+            cart[0].count=itemCount+1;
+            var price=parseFloat(employeeData.addressPostal);
+            cart[0].total=total+price;
+            total=cart[0].total;
+            console.log("Total is =="+total);
             itemCount++;
     console.log(cart[itemCount]);
             if (employees.length == 0) {

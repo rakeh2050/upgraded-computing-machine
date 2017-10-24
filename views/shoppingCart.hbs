@@ -45,26 +45,26 @@
 
    
     <div class="row">
- 
+ <h1>Items In Cart</h1>
    <div class = "table-responsive" id="main-table">
              
             <table class ="table col-md-4">
-            <thead >
-                <tr>
-                    <th colspan="1">Item in Cart</th>
-                    
-                </tr>
-            </thead>
+           
+            
             <tbody>
                 {{#each data}}
-
+<h3 class="nowrap">{{count}}</h3>
                     <tr>
                         <td>
                         {{firstName}}
+
                         </td>
+                        <td>{{addressPostal}}</td>
                         
                     </tr>
+                    <h3>{{total}}</h3>
                 {{/each}}
+                <h3 class="nowrap">Total</h3>
             </tbody>
             </table>
         </div>             
