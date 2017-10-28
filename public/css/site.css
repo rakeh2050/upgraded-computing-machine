@@ -74,6 +74,7 @@ body{
 			text-align: center;
 			background: rgba(255, 0, 0, 0.25);
 		  }
+		  
 #products{
 	margin:5px;
 	padding:1px;
@@ -84,19 +85,31 @@ body{
 	color: black;
 	text-align: center;
 }
-.nowrap {
-	white-space: nowrap ;
-  }
+.btn-success {
+    color: #fff;
+    background-color: crimson;
+    border-color: darkred;
+}
+.btn-unsuccess{
+	background-color: yellow;
+}
 .data{
 	padding-top:5px;
 }
-		table{
+		table.col-md-4{
 			font-size: 15px;
-			width:auto;
+			padding:15%;
+			width:50%;
 			
 			background:rgba(44, 62, 80,0.8);
 			
 			
+		}
+		body #display{
+			width:90%px;
+			height: auto;
+			margin:2%;
+
 		}
 		#content{
 			margin-top:3%;
@@ -134,7 +147,11 @@ body{
 			text-transform: uppercase;
 			font-size:13px;
 		}
-		
+		#list{
+			padding-left: 8%;
+			
+			
+		}
 		footer{
 			background-color: #6E024E;
 			color: #eee;
