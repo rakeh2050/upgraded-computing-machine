@@ -4,12 +4,13 @@ body{
     margin: 0;
     width:100%;
     height:100%;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
     color:white;
-    background: #0099F7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right,#0099F7, #F11712 );  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right,#0099F7, #F11712); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #8e9eab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     
                
     
@@ -28,11 +29,48 @@ body{
  border-bottom:1.5px solid black;
  
      margin-bottom:3% ;
-
+height:100px;
      
      
        
  }
+ hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 2px solid black;
+}
+#hrdiff {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 2px solid grey;
+}
+ a {
+    color: rgb(3, 92, 84);
+    
+}
+ .nowrap {
+    white-space: nowrap ;
+  }
+ aside.col-md-3{
+     color:black;
+ }
+ aside.col-md-3 p{
+    color:teal;
+}
+article h2  {
+    color:teal;
+}
+article p  {
+    color:teal;
+}
+label{
+    color:teal;
+}
+h4{
+    color:teal;
+}
  .l-wrap {
      max-width: 1140px;
      margin-right: auto;
@@ -54,6 +92,9 @@ body{
    }
    #navbar{
        background:transparent; 
+   }
+   #head_media{
+       padding-left:35%;
    }
    .grid-item {
      width: calc((100% - 24px * 3) / 3);
@@ -89,7 +130,7 @@ margin:5px;
 padding:1px;
 height:210px;
 width:240px;
-border: 8px solid skyblue;
+border: 8px solid teal;
 background:white;
 color: black;
 text-align: center;
@@ -124,6 +165,14 @@ padding-top:5px;
      margin-top:3%;
      border: 8px solid white;
      background:rgba(52, 152, 219,0.99);
+     color: white;
+ }
+ #hometext{
+     color:white;
+ }
+ #init{
+    position: absolute;
+     top:20px;
      
  }
  nav{
@@ -131,9 +180,7 @@ padding-top:5px;
      margin-bottom:1%;
      padding-top:0px;
       
-     background: #0099F7;  /* fallback for old browsers */
-     background: -webkit-linear-gradient(to right,#0099F7, #F11712 );  /* Chrome 10-25, Safari 5.1-6 */
-     background: linear-gradient(to right,#0099F7, #F11712); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     background:transparent;
      
  }
  h1{
@@ -160,13 +207,15 @@ padding-top:5px;
      font-size:13px;
  }
  #list{
-     padding-left: 14%;
-     border-left:5px solid white;
+     padding-left: 4%;
+
      
  }
  footer{
-     background-color: #6E024E;
+     background-color:black;;
      color: #eee;
+     width:auto;
+     height:200px;
      padding:10px;
  }
  
@@ -179,10 +228,11 @@ padding-top:5px;
 #input{
 color:black;
 border: 4px solid black;
-border-radius: 50%;
-height: 80px;
-width: 80px;
 
+padding-right:10px;
+margin-right:10px;
+
+margin-top:3%;
 font-size: 20px;
 background: transparent;  /* fallback for old browsers */
 
@@ -193,7 +243,8 @@ background: transparent;  /* fallback for old browsers */
 color:black;
 border: 4px solid black;
  
-
+padding-right:10px;
+margin-right:10px;
 font-size: 20px;
 background:transparent;
 
