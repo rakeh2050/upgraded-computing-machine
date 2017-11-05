@@ -52,13 +52,13 @@ app.get("/about", function(request,response){
   response.render("about");
 });
 
-app.get("/employees", function(request,response){
+app.get("/products", function(request,response){
   
   if(request.query.status){
 db.getEmployeesByStatus(request.query.status).then(function(data) {
-  response.render("employeeList", { data: data, title: "Employees" });
+  response.render("productList", { data: data, title: "Products" });
 }).catch((err) => {
-  response.render("employeeList", { data: {}, title: "Employees" });
+  response.render("productList", { data: {}, title: "Products" });
 });
 
 /////////////////////////////////////////////
@@ -66,25 +66,25 @@ db.getEmployeesByStatus(request.query.status).then(function(data) {
   
       else if(request.query.department){
         db.getEmployeesByDepartment(request.query.department).then((data) => {
-          response.render("employeeList", { data: data, title: "Employees" });
+          response.render("productList", { data: data, title: "Employees" });
       }).catch((err) => {
-          response.render("employeeList", { data: {}, title: "Employees" });
+          response.render("productList", { data: {}, title: "Employees" });
       });
       }
       /////////////////////
       else if(request.query.manager){
         db.getEmployeesByManager(request.query.manager).then((data) => {
 
-          response.render("employeeList", { data: data, title: "Employees" });
+          response.render("productList", { data: data, title: "Employees" });
       }).catch((err) => {
-          response.render("employeeList", { data: {}, title: "Employees" });
+          response.render("productList", { data: {}, title: "Employees" });
       });
       }else
       {
         db.getAllEmployees().then((data) => {
-          response.render("employeeList", { data: data, title: "PRODUCTS" });
+          response.render("productList", { data: data, title: "PRODUCTS" });
       }).catch((err) => {
-          response.render("employeeList", { data: {}, title: "Employees" });
+          response.render("productList", { data: {}, title: "Employees" });
       });
       }
 
@@ -142,7 +142,7 @@ db.getEmployeesByStatus(request.query.status).then(function(data) {
             ///////////////////////////////////////////
             
       }).catch((err) => {
-          response.render("employeeList", { data: {}, title: "Employees" });
+          response.render("productList", { data: {}, title: "Employees" });
       });
     
   
@@ -170,9 +170,9 @@ app.post("/employee/update", (req, res) => {
 
 app.get("/managers", function(request,response){
       db.getManagers().then(function(data){
-        response.render("employeeList", { data: data, title: "Employees (Managers)" });
+        response.render("productList", { data: data, title: "Employees (Managers)" });
       }).catch(function(err){
-        res.render("employeeList", { data: {}, title: "Employees (Managers)" });
+        res.render("productList", { data: {}, title: "Employees (Managers)" });
       });
 });
 
