@@ -16,6 +16,7 @@ var empCount=0;
 var itemCount=0;
 var cart=[];
 var total=0;
+var j=0;
 module.exports.initialize = function(){
     
     return new Promise(function(resolve,reject){
@@ -176,9 +177,10 @@ module.exports.getEmployeesByStatus = function(status){
                console.log(employeeData.length);
             cart[itemCount]=employeeData;
             cart[0].count=itemCount+1;
-            var price=parseFloat(employeeData.addressPostal);
+            var price=parseFloat(employeeData.addressPostal)*employeeData.department;
             cart[0].total=total+price;
             total=cart[0].total;
+            j++;
             console.log("Total is =="+total);
             itemCount++;
     console.log(cart[itemCount]);
