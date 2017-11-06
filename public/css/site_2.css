@@ -34,6 +34,14 @@ height:100px;
      
        
  }
+ body #display{
+    width:auto;
+    height: auto;
+    
+    margin-bottom:2%;
+    margin-top:0%;
+
+}
  hr {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -155,12 +163,7 @@ padding-top:5px;
      
      
  }
- body #display{
-     width:90%px;
-     height: auto;
-     margin:2%;
 
- }
  #content{
      margin-top:3%;
      border: 8px solid white;
@@ -172,13 +175,21 @@ padding-top:5px;
      
  }
  #init{
-    position: absolute;
-     top:20px;
+    position: relative;
+     top:10px;
      
  }
- #init2{
+ #navb{
+     width:auto;
+ }
+ #navb2{
+    width:900px;
     position: absolute;
-     top:20px;
+}
+ #init2{
+    position: relative;
+     top:0px;
+
      
  }
  nav{
