@@ -204,10 +204,13 @@ padding-top:5px;
      color: black;
  }
  nav ul.pull-left{
-     list-style-type: none;
-     padding-left:0px;
-     margin:0px;
-     margin-left:200px;
+    list-style-type:square;
+    position: absolute;
+   margin-top:1.0%; 
+    
+    margin-right:45%;
+    
+    
  }
  ul.pull-right{
     list-style-type:square;
