@@ -209,12 +209,12 @@ padding-top:5px;
      margin:0px;
      margin-left:200px;
  }
- nav ul.pull-right{
+ ul.pull-right{
     list-style-type:square;
+    position: absolute;
+   margin-top:0.8%; 
     
-   
-    margin:0px;
-    margin-left:500px;
+    margin-left:45%;
 }
 
  nav ul li{
@@ -267,10 +267,10 @@ background: black;  /* fallback for old browsers */
 #input2{
 color:white;
 border: 4px solid black;
- right:1500px;
+ margin-bottom: 100%;
 padding-right:10px;
 margin-right:1%;
-margin-top:11%;
+
 font-size: 20px;
 background:black;
 
