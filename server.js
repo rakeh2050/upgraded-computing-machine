@@ -162,7 +162,7 @@ app.post("/employee/update", (req, res) => {
   db.updateEmployee(req.body).then((data) => {
       console.log("data::");
       console.log(req.body);
-      res.redirect("/employees");
+      res.redirect("/products");
   }).catch((err) => {
       console.log(err);
   })
